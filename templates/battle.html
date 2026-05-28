@@ -2,18 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battle</title>
-
+    <title>Card Battle Game</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
-    <h1>Battle Screen</h1>
+<h1>⚔️ Card Battle Game</h1>
 
-    <a href="/">
-        <button>Back To Menu</button>
-    </a>
+<!-- RESULT TEXT -->
+<h2 id="result">Battle Start</h2>
+
+<!-- GAME AREA -->
+<div class="game">
+
+    <!-- PLAYER -->
+    <div class="card">
+        <h3>Player</h3>
+        <p>HP: <span id="player-hp"></span></p>
+        <p>Mana: <span id="player-mana"></span></p>
+    </div>
+
+    <!-- ENEMY -->
+    <div class="card">
+        <h3>Enemy</h3>
+        <p>HP: <span id="enemy-hp"></span></p>
+        <p>Mana: <span id="enemy-mana"></span></p>
+    </div>
+
+</div>
+
+<!-- HAND -->
+<div id="hand"></div>
+
+<!-- SCRIPT -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 </html>
