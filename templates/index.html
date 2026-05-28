@@ -5,83 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Battle</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-    <!-- MAIN MENU -->
-    <div id="main-menu" class="screen">
+    <h1>Card Battle</h1>
 
-        <h1>Card Battle</h1>
+    <div class="menu-buttons">
 
-        <button id="play-btn">Play</button>
+        <a href="/battle">
+            <button>Play</button>
+        </a>
 
-        <button id="cards-btn">Cards</button>
+        <a href="/cards">
+            <button>Cards</button>
+        </a>
 
-        <button id="settings-btn">Settings</button>
-
-    </div>
-
-
-    <!-- MODE SELECT -->
-    <div id="mode-select" class="screen hidden">
-
-        <h1>Select Mode</h1>
-
-        <button id="ai-mode-btn">
-            VS AI
-        </button>
-
-        <button id="pvp-mode-btn">
-            2 Player
-        </button>
+        <a href="/settings">
+            <button>Settings</button>
+        </a>
 
     </div>
-
-
-    <!-- CHARACTER SELECT -->
-    <div id="character-select" class="screen hidden">
-
-        <h1>Select Your Character</h1>
-
-        <div class="character-container">
-
-            <div class="character-card" data-character="Fire Knight">
-                <h2>Fire Knight</h2>
-
-                <p>HP: 120</p>
-                <p>Armor: 5</p>
-                <p>Mana: 10</p>
-            </div>
-
-
-            <div class="character-card" data-character="Ice Mage">
-                <h2>Ice Mage</h2>
-
-                <p>HP: 80</p>
-                <p>Armor: 2</p>
-                <p>Mana: 20</p>
-            </div>
-
-
-            <div class="character-card" data-character="Shadow Assassin">
-                <h2>Shadow Assassin</h2>
-
-                <p>HP: 90</p>
-                <p>Armor: 3</p>
-                <p>Mana: 15</p>
-            </div>
-
-        </div>
-
-        <button id="start-game-btn">
-            Start Battle
-        </button>
-
-    </div>
-
-
-    <script src="script.js"></script>
 
 </body>
 </html>
